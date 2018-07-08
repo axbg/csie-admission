@@ -2,16 +2,18 @@ h2{
     text-align: center;
     font-size: 150px;
 }
-.form-group,h2{
+h2{
     color: #2e6cb5;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
-.col-md-8{
-   display:table-row-group;
+.form-control{
+    height: 100px;
+    width: 100px;
 }
-
-.col-sm-4{
-    left: 30%;
+.btn-primary.btn-block{
+   margin-left: 60px;
+   margin-top: 10px;
+    width: 100px;
 }
 /*butoane*/
 .btn-circle.btn-lg {
