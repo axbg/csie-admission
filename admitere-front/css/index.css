@@ -2,17 +2,15 @@ html,body,.container-fluid,.row{
   height:100%;
 }
 
-/*bulinutele*/
 
+/*left display*/
 .disp{
-  width:100%;
-  margin-bottom:50%;
+  max-width:100%;
+  margin-top:50px;
+  margin-bottom:50px;
 }
 
-.left-col{
-  height:100%;
-}
-
+/*center-display*/
 .center-col{
   text-align:center;
 }
@@ -21,20 +19,83 @@ html,body,.container-fluid,.row{
   font-size:480px;
 }
 
+.info{
+  font-size:40px;
+}
+
+.hashtag{
+  font-size:100px;
+}
+
 @media screen and (max-width: 1000px) {
   .counter {
     font-size: 300px;
+  }
+
+  .hashtag{
+    font-size:60px;
+  }
+
+  .info{
+    font-size:30px;
+  }
+
+  .disp{
+    max-width:100%;
+    margin-top:30px;
+    margin-bottom:30px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .counter {
-    font-size: 50px;
+    font-size: 120px;
+  }
+
+  .hashtag{
+    font-size:40px;
+  }
+
+  .info{
+    font-size:30px;
+    margin-bottom:20%;
+    margin-top:20%;
+  }
+
+  .disp{
+    max-width:100%;
+    margin-top:50px;
+    margin-bottom:50px;
   }
 }
 
-@media screen and (max-width: 300px) {
+
+@media screen and (max-width: 470px) {
   .counter {
-    font-size: 50px;
+    font-size: 120px;
   }
+
+  .hashtag{
+    font-size:30px;
+  }
+
+  .info{
+    font-size:20px;
+    margin-bottom:40%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .counter {
+    font-size: 80px;
+  }
+  .hashtag{
+    font-size:20px;
+  }
+
+  .info{
+    font-size:20px;
+  }
+
+
 }
