@@ -1,4 +1,40 @@
+html,body,.container-fluid,.row{
+  height:100%;
+}
 
-main{
+/*bulinutele*/
+
+.disp{
+  width:100%;
+  margin-bottom:50%;
+}
+
+.left-col{
+  height:100%;
+}
+
+.center-col{
   text-align:center;
+}
+
+.counter{
+  font-size:480px;
+}
+
+@media screen and (max-width: 1000px) {
+  .counter {
+    font-size: 300px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .counter {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .counter {
+    font-size: 50px;
+  }
 }
