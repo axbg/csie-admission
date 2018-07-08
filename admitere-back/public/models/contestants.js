@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('contestants', {
-    number: DataTypes.INTEGER
+    number: DataTypes.INTEGER,
   }, {
     underscored: true
   });
