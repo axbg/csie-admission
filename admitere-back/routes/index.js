@@ -4,7 +4,6 @@ let Contestant = require('./contestant');
 let User = require('./users');
 let usersController = require('../public/controllers/usersController');
 
-
 router.get('/', usersController.authMiddleware, (req, res, next) => {
   res.send('index');
 });

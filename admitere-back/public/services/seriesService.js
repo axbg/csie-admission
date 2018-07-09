@@ -19,20 +19,26 @@ let millisToCurrentDate = function (millis) {
 module.exports.prepareResponse = function (result, number) {
 
   let diff = [];
+  let avgToMinutes = '0:00';
+  let realTime = '00:00:00';
 
-  for (let i = 0; i < result.length - 1; i++) {
-    diff.push(parseInt(result[i + 1].data) - parseInt(result[i].data));
+  if (result.length > 1) {
+    for (let i = 0; i < result.length - 1; i++) {
+      diff.push(parseInt(result[i + 1].data) - parseInt(result[i].data));
+    }
+
+    let sum = diff.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+
+    let avg = sum / result.length;
+
+    avgToMinutes = millisToMinutesAndSeconds(avg);
   }
 
-  let sum = diff.reduce(function (a, b) {
-    return a + b;
-  }, 0);
-
-  let avg = sum / result.length;
-
-  let avgToMinutes = millisToMinutesAndSeconds(avg);
-
-  let realTime = millisToCurrentDate(parseInt(result[result.length - 1].data));
+  if(result.length > 0) {
+    realTime = millisToCurrentDate(parseInt(result[result.length - 1].data));
+  }
 
   let values = [];
   values.push(avgToMinutes);
