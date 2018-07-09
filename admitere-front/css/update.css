@@ -6,15 +6,16 @@ h2{
 }
 .form-control{
     height: 100px;
-    width: 100px;
+    width: 300px;
    font-size: 40px;
+   margin-left: 30px;
     
 }
-.btn-primary.btn-block{
-   margin-left: 100px;
+.btn-success.btn-block{
+   margin-left: 110px;
    margin-top: 10px;
    
-    width: 100px;
+    width: 130px;
 }
 /*butoane*/
 .btn-circle.btn-lg {
@@ -35,6 +36,8 @@ h2{
     font-size: 20px;
     line-height: 2.00;
     border-radius: 30px;
+    margin-right: 5px;
+    margin-top: 10px;
   }
 
   @media screen and (min-width:730px){
