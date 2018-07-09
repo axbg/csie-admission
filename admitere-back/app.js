@@ -15,13 +15,13 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(bodyParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(expressSession(({ secret: 'keyboard cat', cookie: { maxAge: 60000 }})));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://desktop");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
+app.use(expressSession(({ secret: '=egjerjg!!@#wjei//wkegwe__1235ggwefw_WERPnongwe', cookie: {httpOnly: true, secure: true, maxAge: 86400000}})));
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

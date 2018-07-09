@@ -10,7 +10,9 @@ let millisToCurrentDate = function (millis) {
 
   let d = new Date(millis);
 
-  return d.getHours() + ":" + d.getMinutes();
+  let minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+
+  return d.getHours() + ":" + minutes;
 
 };
 
