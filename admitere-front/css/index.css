@@ -1,5 +1,6 @@
 html,body,.container-fluid,.row{
   height:100%;
+  padding: 0;
 }
 
 
@@ -15,12 +16,18 @@ html,body,.container-fluid,.row{
   text-align:center;
 }
 
+.left-col{
+  padding: 0 !important;
+  overflow-y:auto;
+  border-right: 1px black solid;
+}
+
 .counter{
   font-size:480px;
 }
 
 .info{
-  font-size:40px;
+  font-size:35px;
 }
 
 .hashtag{
@@ -38,6 +45,8 @@ html,body,.container-fluid,.row{
 
   .info{
     font-size:30px;
+    margin-bottom:15%;
+    margin-top:10%;
   }
 
   .disp{

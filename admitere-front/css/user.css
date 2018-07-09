@@ -1,18 +1,16 @@
-h3{
-    text-align: center;   
+h3 {
+  text-align: center;
 }
 
-.at-center{
-	text-align:center;
-	
+.at-center {
+  text-align: center;
 }
 
-.full{
-	width:100%;
+.full {
+  width: 100%;
+  margin-top: 20px;
 }
 
-.disp{
-	max-width:150px;
-	padding:20px;
-	margin-top:50px;
+.principal{
+  margin-top:50px;
 }
