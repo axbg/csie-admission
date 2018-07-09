@@ -1,3 +1,4 @@
+
 window.onload = function () {
 
   document.getElementById("username").focus();
@@ -15,10 +16,10 @@ let login = function () {
     params.append('username', username.value);
     params.append('password', password.value);
 
-    axios.post("http://admitere.sisc.ro/user/login", params,
+    axios.post(backURL + "/user/login", params,
         {withCredentials: true})
     .then((result) => {
-      window.location.href = "update.html";
+      window.location.href = "update-front.html";
     }).catch((ex) => {
       alert("Credentials are not valid!");
       username.value = "";

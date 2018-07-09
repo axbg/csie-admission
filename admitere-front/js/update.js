@@ -1,6 +1,14 @@
 window.onload = function () {
 
-  wsConnection();
+  axios.get(backURL + "/")
+  .then((result) => {
+    wsConnection();
+    document.getElementById("main-container").innerHTML = content;
+  }).catch((err) => {
+    window.location.href = "user-login-admitere-2018.html";
+  });
+
+  document.getElementById("main-container").innerHTML = content;
 
 };
 
@@ -14,8 +22,12 @@ let wsConnection = function () {
     $("#updateButton").unbind("click");
     $("#updateButton").click(function () {
       let increment = document.getElementById('increment').value;
-      axios.post('http://localhost:3000/contestant/addContestant',
-          {increase: increment})
+
+      let params = new URLSearchParams();
+      params.append('increase',increment);
+
+      axios.post(backURL + '/contestant/addContestant',
+          params, {withCredentials: true})
       .then(() => {
         socket.emit('receive', 'dalala')
       });
@@ -30,6 +42,7 @@ let wsConnection = function () {
   });
 
 };
+
 
 let incrementSet = function (element) {
 
