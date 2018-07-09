@@ -18,8 +18,7 @@ let login = function () {
     axios.post("http://admitere.sisc.ro/user/login", params,
         {withCredentials: true})
     .then((result) => {
-      console.log(result);
-      //window.location.replace("update.html");
+      window.location.href = "update.html";
     }).catch((ex) => {
       alert("Credentials are not valid!");
       username.value = "";

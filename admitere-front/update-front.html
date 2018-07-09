@@ -1,44 +1,51 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Update</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/update.css" />
-    <script src="main.js"></script>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/update.css"/>
+  <script src="js/update.js"></script>
 </head>
 <body>
-    
-    <div class="container">
-         
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-md-offset-4">
-                    <h2>512</h2> 
-                    <div class="account-wall">
-                            <form class="form-signin">
-                                    <input type="text" class="form-control" required autofocus>                         
-                            </form>  
-                    </div>
-                    <div class="text-center"> 
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="btn btn-circle btn-primary">5</a>
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="btn btn-circle btn-primary">10</a>           
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="btn btn-circle btn-primary">15</a>
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="btn btn-circle btn-primary">20</a>
-        <div class="buttons">
-            <button type="button" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-plus"></i></button>
-            <button type="button" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-minus"></i></button> 
-        </div>
-        <div class="buttons">
-            <button class="btn btn-lg btn-success btn-block col-md-4 col-md-offset-4" type="submit">Submit</button>
-        </div>
-        
-        			</div>
-            </div>
-        </div>
-    </div>     
-        
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <h2 id="nr">000</h2>
+      <div class="account-wall">
+        <form class="form-signin">
+          <input id="increment" type="number" class="form-control" value="0" required autofocus>
+        </form>
+      </div>
+      <div class="text-center">
+        <a class="btn btn-circle btn-primary" onclick="incrementSet(this);">5</a>
+        <a class="btn btn-circle btn-primary" onclick="incrementSet(this);">10</a>
+        <a class="btn btn-circle btn-primary" onclick="incrementSet(this);">15</a>
+        <a class="btn btn-circle btn-primary" onclick="incrementSet(this);">20</a>
+        <div class="buttons">
+          <button type="button" class="btn btn-info btn-circle btn-lg"><i
+              class="glyphicon glyphicon-plus" onclick="increment();"></i></button>
+          <button type="button" class="btn btn-danger btn-circle btn-lg"><i
+              class="glyphicon glyphicon-minus" onclick="decrement();"></i></button>
+        </div>
+        <div class="buttons">
+          <button id="updateButton" class="btn btn-lg btn-success btn-block col-md-4 col-md-offset-4">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/update.js"></script>
 </body>
 </html>
