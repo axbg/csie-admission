@@ -47,12 +47,13 @@ html,body,.container-fluid,.row{
 }
 
 .counter{
-  font-size:465px;
+  font-size:400px;
   margin-bottom: -10px;
 }
 
 .info{
   font-size:35px;
+  margin-bottom:50px;
 }
 
 .hashtag{
@@ -73,7 +74,7 @@ html,body,.container-fluid,.row{
 
   .info{
     font-size:30px;
-    margin-bottom:15%;
+    margin-bottom:10%;
     margin-top:10%;
   }
 
@@ -124,7 +125,7 @@ html,body,.container-fluid,.row{
 
   .info{
     font-size:20px;
-    margin-bottom:40%;
+    margin-bottom:20%;
   }
 }
 
