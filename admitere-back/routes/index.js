@@ -4,8 +4,8 @@ let Contestant = require('./contestant');
 let User = require('./users');
 let usersController = require('../public/controllers/usersController');
 
-router.get('/', usersController.authMiddleware, (req, res, next) => {
-  res.send('index');
+router.get('/test/login', usersController.authMiddleware, (req, res, next) => {
+  res.status(200).send({message: 'Logged in'});
 });
 
 /* Database creation

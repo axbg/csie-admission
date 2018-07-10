@@ -22,7 +22,7 @@ module.exports.prepareResponse = function (result, number) {
   let avgToMinutes = '0:00';
   let realTime = '00:00:00';
 
-  if (result.length > 1) {
+   if(result.length > 1){
     for (let i = 0; i < result.length - 1; i++) {
       diff.push(parseInt(result[i + 1].data) - parseInt(result[i].data));
     }
@@ -31,12 +31,12 @@ module.exports.prepareResponse = function (result, number) {
       return a + b;
     }, 0);
 
-    let avg = sum / result.length;
+    let avg = sum / (result.length-1);
 
     avgToMinutes = millisToMinutesAndSeconds(avg);
   }
 
-  if(result.length > 0) {
+   if(result.length > 0){
     realTime = millisToCurrentDate(parseInt(result[result.length - 1].data));
   }
 
