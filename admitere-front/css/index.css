@@ -8,9 +8,129 @@ html,body,.container-fluid,.row{
 }
 
 
-/*left display*/
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 5px;
+  padding-right: 5px;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: row wrap;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container-flex > * {
+  flex: 1 100%;
+}
+
+.main {
+  text-align: center;
+  max-height: 100vh;
+  background-color: skyblue;
+  border-left: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.media {
+  max-width: 100vh;
+  min-width: 0;
+  margin: 70px 10px;
+}
+
+.aside {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  max-width: 33.33vh;
+}
+
+img {
+  width: 450px;
+  max-height: 450px;
+  max-width: 100%;
+}
+
+.counter{
+  font-size:150px;
+  margin-bottom: -10px;
+}
+
+.info{
+  font-size:35px;
+  margin-bottom:50px;
+}
+
+.hashtag{
+  font-size: 80px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.counter {
+  margin: 1.5%;
+}
+
+@media screen and (max-width: 470px) {
+
+  .mobile {
+    margin-top: 15vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    margin-top: 21vh;
+  }
+
+  .counter {
+    font-size: 120px;
+  }
+
+  .hashtag{
+    font-size:30px;
+  }
+
+  .info{
+    font-size:20px;
+    margin-bottom:20%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+
+  .mobile {
+    margin-top: 15vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    margin-top: 17vh;
+  }
+
+  .counter {
+    font-size: 80px;
+  }
+  .hashtag{
+    font-size:20px;
+  }
+
+  .info{
+    font-size:20px;
+  }
+
+}
+
+/*
 .disp{
-  max-width:100%;
+  max-width:100vh;
   margin-top:50px;
   margin-bottom:50px;
 }
@@ -30,7 +150,7 @@ html,body,.container-fluid,.row{
   font-size: 1.2em;
 }
 
-/*center-display*/
+/* 
 .center-col{
   text-align:center;
   bottom: 25px;
@@ -87,8 +207,6 @@ html,body,.container-fluid,.row{
 
 @media screen and (max-width: 800px) {
 
-
-
   .counter {
     font-size: 120px;
   }
@@ -113,8 +231,6 @@ html,body,.container-fluid,.row{
 
 @media screen and (max-width: 470px) {
 
-
-
   .counter {
     font-size: 120px;
   }
@@ -131,7 +247,6 @@ html,body,.container-fluid,.row{
 
 @media screen and (max-width: 330px) {
 
-
   .counter {
     font-size: 80px;
   }
@@ -143,5 +258,6 @@ html,body,.container-fluid,.row{
     font-size:20px;
   }
 
-
 }
+
+*/
