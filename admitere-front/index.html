@@ -1,8 +1,14 @@
+<!--
+De facut la anul un front mai curat.
+Eu recomand sa fie folosit tot flexbox deoarece
+pagina nu este prea incarcata iar lucrurile trebuie sa fie cat mai responsive cu putinta
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Metadata -->
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Title -->
@@ -30,7 +36,7 @@
 </head>
 <body>
 
-<!-- Container Fluid for width: 100% viewport wrap -->
+<!-- Container Flex -->
 <div class="container-flex">
 
   <div class="aside aside1">
@@ -67,31 +73,10 @@
       </div>
   </div>
 
-  <!--
-  <div class="row">
-    <div class="left-col box box1 col-sm-4">    
+  <!-- Modal Start -->
 
-      <div>
-        <a href="http://ase.ro" target="_blank"><img class="disp img-fluid col-12" src="img/ASE.png" alt="ASE"></a>
-        <a href="http://csie.ase.ro" target="_blank"><img class="disp img-fluid col-12" src="img/CSIE.png" alt="CSIE"></a>
-        <a href="http://sisc.ro" target="_blank"><img class="disp img-fluid col-12" src="img/SISC.png" alt="SiSC ASE"></a>
-      </div>
-    </div>
-
-    <div class="albastru box box2 center-col col-sm-8">
-      <strong><h1 id="nr" class="counter">000</h1></strong>
-      <h3 id="hour" class="info">Ultima serie de 10 persoane a intrat la ora</h3>
-      <h3 id="avg" class="info">Media de așteptare pentru intrarea unei serii noi este</h3>
-      <h1 class="hashtag">#AdmitereCSIE</h1>
-      <button type="button" class="btncentru btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="background-color: #1A154C; margin-top: 5px; width: 6em; height: 1.9em; font-size: 1.8em">
-      Linkuri utile
-      </button>
-    </div>
-  </div>
-</div>
--->
-<!-- Modal Start -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Header -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -100,6 +85,8 @@
           <span aria-hidden="true">&times;</span>
           </button>
         </div>
+ 
+        <!-- Modal Body -->
         <div class="modal-body">
            <div class="margine">
               <i class="fas fa-user-circle"></i>
@@ -119,19 +106,50 @@
                 <a href="http://www.ase.ro/admitere2018/licenta2018/pdf/Ghid%20Admitere%20Licenta%202018.pdf" target="_blank">Ghid admitere</a>
               </span>
             </div>
-        <div class="margine"><i class="fas fa-question-circle"></i><span class="margine1"><a href="http://ase.ro/admitere2018/licenta2018/intrebari.asp" target="_blank">Întrebări frecvente</a></span></div>
-        <div class="margine"><i class="fas fa-book-open"></i><span class="margine1"><a href="http://ase.ro/admitere2018/licenta2018/pdf/Metodologie_defalcata/Oferta_locuri_IF.pdf" target="_blank">Ofertă locuri</a></span></div>
-        <div class="margine"><i class="fas fa-list-ol"></i><span class="margine1"><a href="http://ase.ro/admitere2018/licenta2018/pdf/Medii_licenta_iulie_2017.pdf" target="_blank">Ultimele medii 2017</a></span></div>
-  
-        <div class="text-center"><p class="utile">Încă mai ai întrebări?</br>Ne găsești pe:</p></div>
-        <div class="margine"><i class="fab fa-facebook"></i><span class="margine1"><a href="https://www.facebook.com/sisc.ase/" target="_blank">SiSC ASE</a></span></div>
-        <div class="margine"><i class="fas fa-envelope"></i><span class="margine1"><a href="mailto:info@sisc.ro" target="_blank">info@sisc.ro</a></span></div>	
-        <div class="margine"><i class="fas fa-globe"></i><span class="margine1"><a href="https://sisc.ro" target="_blank">Site-ul SiSC</a></span></div>
-  
+            <div class="margine">
+              <i class="fas fa-question-circle"></i>
+              <span class="margine1">
+              <a href="http://ase.ro/admitere2018/licenta2018/intrebari.asp" target="_blank">Întrebări frecvente</a>
+              </span>
+            </div>
+            <div class="margine">
+              <i class="fas fa-book-open"></i>
+              <span class="margine1">
+                <a href="http://ase.ro/admitere2018/licenta2018/pdf/Metodologie_defalcata/Oferta_locuri_IF.pdf" target="_blank">Ofertă locuri</a>
+              </span>
+            </div>
+            <div class="margine">
+              <i class="fas fa-list-ol"></i>
+              <span class="margine1">
+                <a href="http://ase.ro/admitere2018/licenta2018/pdf/Medii_licenta_iulie_2017.pdf" target="_blank">Ultimele medii 2017</a>
+              </span>
+            </div>
+            <div class="text-center">
+              <p class="utile">Încă mai ai întrebări?</br>Ne găsești pe:</p>
+            </div>
+            <div class="margine">
+              <i class="fab fa-facebook"></i>
+              <span class="margine1">
+                <a href="https://www.facebook.com/sisc.ase/" target="_blank">SiSC ASE</a>
+              </span>
+            </div>
+            <div class="margine">
+              <i class="fas fa-envelope"></i>
+              <span class="margine1">
+                <a href="mailto:info@sisc.ro" target="_blank">info@sisc.ro</a>
+              </span>
+            </div>	
+            <div class="margine">
+              <i class="fas fa-globe"></i>
+              <span class="margine1">
+                <a href="https://sisc.ro" target="_blank">Site-ul SiSC</a>
+              </span>
+            </div>
         </div>
+
+        <!-- Modal Footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
-          
         </div>
       </div>
 </div>
