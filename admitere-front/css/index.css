@@ -30,8 +30,9 @@ ul {
   max-height: 100vh;
   background-color: skyblue;
   border-left: 1px solid black;
-  align-items: center;
   justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .media {
@@ -44,6 +45,7 @@ ul {
   background-color: white;
   justify-content: center;
   align-items: center;
+  align-content: center;
   max-width: 33.33vh;
 }
 
