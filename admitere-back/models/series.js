@@ -3,6 +3,6 @@ module.exports = (sequelize, DataTypes) => {
     data: DataTypes.STRING,
     contestants: DataTypes.INTEGER
   }, {
-    underscored: true
-  });
+      underscored: true
+    });
 };

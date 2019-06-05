@@ -1,6 +1,5 @@
-let express = require('express');
-let router = express.Router();
-let usersController = require('../public/controllers/usersController');
+const router = require('express').Router();
+const usersController = require('../controllers/usersController');
 
 router.post('/login', usersController.login);
 router.get('/logout', usersController.logout);

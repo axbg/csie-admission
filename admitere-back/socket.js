@@ -1,10 +1,9 @@
-let Contestants = require('./models').Contestants;
-let Services = require('./services/seriesService');
-let Series = require('./models').Series;
+const Contestants = require('./models').Contestants;
+const Services = require('./services/seriesService');
+const Series = require('./models').Series;
 
 module.exports = conn = (io) => {
   io.on('connection', (client) => {
-
 
     //--at first connection
     let data = null;
@@ -33,7 +32,6 @@ module.exports = conn = (io) => {
     }).catch((err) => {
       io.emit('update', data);
     });
-
 
 
 
@@ -67,7 +65,5 @@ module.exports = conn = (io) => {
       })
 
     });
-
   })
 };
-

@@ -21,7 +21,7 @@ app.set('port', port);
 
 let server = http.createServer(app);
 let io = require('socket.io')(server);
-let ioHandlers = require('../public/socket')(io);
+let ioHandlers = require('../socket')(io);
 
 /**
  * Listen on provided port, on all network interfaces.
