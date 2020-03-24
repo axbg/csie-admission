@@ -3,13 +3,12 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressSession = require('express-session');
-
-const sequelize = require('./models/index').sequelize;
 const indexRouter = require('./routes/index');
 const COOKIE_SESSION_SECRET = require('./config/constants').COOKIE_SESSION_SECRET;
 
 const app = express();
 
+// const sequelize = require('./models/index').sequelize;
 // sequelize.sync({force: true});
 
 app.use(express.urlencoded({ extended: false }));

@@ -4,10 +4,7 @@ const Series = require('./models').Series;
 
 module.exports = conn = (io) => {
   io.on('connection', (client) => {
-
     //--at first connection
-    let data = null;
-
     Contestants.findOne({
       where: {
         id: 1
@@ -15,30 +12,21 @@ module.exports = conn = (io) => {
       attributes: ['number'],
       raw: true,
     }).then((resp) => {
-
       Series.findAll({
         attributes: ['data'],
         raw: true
       }).then((result) => {
-
-        let values = Services.prepareResponse(result, resp['number']);
-
+        const values = Services.prepareResponse(result, resp['number']);
         io.emit('update', values);
-
       }).catch((ex) => {
         console.log(ex.message);
       });
-
     }).catch((err) => {
-      io.emit('update', data);
+      io.emit('update', null);
     });
-
-
 
     //-------after updating the database;
     client.on('receive', () => {
-      let data = null;
-
       Contestants.findOne({
         where: {
           id: 1
@@ -46,24 +34,18 @@ module.exports = conn = (io) => {
         attributes: ['number'],
         raw: true,
       }).then((resp) => {
-
         Series.findAll({
           attributes: ['data'],
           raw: true
         }).then((result) => {
-
-          let values = Services.prepareResponse(result, resp['number']);
-
+          const values = Services.prepareResponse(result, resp['number']);
           io.emit('update', values);
-
         }).catch((ex) => {
           console.log(ex.message);
         });
-
       }).catch((err) => {
-        io.emit('update', data);
+        io.emit('update', null);
       })
-
     });
   })
 };
